@@ -1,0 +1,20 @@
+<button class="btn btn-warning"
+[disabled]="!allowNewServer"
+(click)="onButtonClick()">Add</button>
+<p [innerText]="allowNewServer"></p>
+
+<Label>Server Name</Label>
+<!--One Way Data Binding-->
+<!--<input type="text"-->
+<!--class="form-control"-->
+<!--(input)="onChangeServerName($event)">-->
+
+<!--Two Way Data Binding-->
+<input type="text"
+       class="form-control"
+       [(ngModel)]="serverName">
+<p>{{serverName}}</p>
+
+<p>servers works!</p>
+<app-server></app-server>
+<!--<app-server></app-server>-->
